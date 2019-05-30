@@ -6,6 +6,7 @@ class HelloWorld extends Component {
       <>
         <h1>Hello, World!</h1>
         <h1>Hi Heather!!</h1>
+        <h1>Hi!</h1>
       </>
     )
   }
