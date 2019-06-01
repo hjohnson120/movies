@@ -30,9 +30,10 @@ class Home extends Component {
         <section className="movies-container">
           {this.state.movies.map((movie, index) => {
             return (
-              <div className="movie">
+              <div className="movie" key={index}>
                 <img
                   src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                  alt="move poster"
                 />
                 <Link to="/Movie" className="title">
                   {movie.title}

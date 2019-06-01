@@ -7,12 +7,12 @@ class App extends Component {
   render() {
     return (
       <>
+        <RandomMovie />
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
           </Switch>
         </Router>
-        <RandomMovie />
       </>
     )
   }
