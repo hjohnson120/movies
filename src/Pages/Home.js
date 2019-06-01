@@ -24,12 +24,12 @@ class Home extends Component {
       <section className="movies-container">
         {this.state.movies.map((movie, index) => {
           return (
-            <>
+            <div className="movie">
               <img
                 src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
               />
-              <h1>{movie.title}</h1>
-            </>
+              <h1 className="title">{movie.title}</h1>
+            </div>
           )
         })}
       </section>
