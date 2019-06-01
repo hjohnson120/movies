@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Home extends Component {
   state = {
-    movieList: []
+    movies: []
   }
 
   componentDidMount() {
@@ -21,7 +21,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <section>{this.state.movieList.original_title.map(movie, index)}</section>
+      <section>{this.state.movies.original_title.map(movie, index)}</section>
     )
   }
 }
