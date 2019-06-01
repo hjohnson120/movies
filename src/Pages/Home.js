@@ -14,10 +14,11 @@ class Home extends Component {
       })
       .then(movieList => {
         console.log(movieList)
+        movies: resp.data.results
       })
   }
   render() {
-    return <div />
+    return <></>
   }
 }
 
