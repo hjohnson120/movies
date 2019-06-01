@@ -13,7 +13,7 @@ class Home extends Component {
         return resp.json()
       })
       .then(movieList => {
-        console.log(movieList)
+        // console.log(movieList)
         this.setState({
           movies: movieList.results
         })
@@ -24,8 +24,12 @@ class Home extends Component {
       <section>
         {this.state.movies.map((movie, index) => {
           return (
-            // <img src = movie. ></img>
-            <h1>{movie.title}</h1>
+            <>
+              <img
+                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+              />
+              <h1>{movie.title}</h1>
+            </>
           )
         })}
       </section>
