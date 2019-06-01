@@ -21,7 +21,18 @@ class Home extends Component {
   }
   render() {
     return (
+<<<<<<< HEAD
       <section>{this.state.movies.original_title.map(movie, index)}</section>
+=======
+      <section>
+        {this.state.movies.map((movie, index) => {
+          return (
+            // <img src = movie. ></img>
+            <h1>{movie.title}</h1>
+          )
+        })}
+      </section>
+>>>>>>> 81d69cbc6adad5b75ddc76026f664a6049d6974a
     )
   }
 }
