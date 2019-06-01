@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Home extends Component {
   state = {
-    movieList: []
+    movies: []
   }
 
   componentDidMount() {
@@ -14,12 +14,21 @@ class Home extends Component {
       })
       .then(movieList => {
         console.log(movieList)
-        movie: resp.data.results
+        this.setState({
+          movies: movieList.results
+        })
       })
   }
   render() {
     return (
-      <section>{this.state.movieList.original_title.map(movie, index)}</section>
+      <section>
+        {this.state.movies.map((movie, index) => {
+          return (
+            // <img src = movie. ></img>
+            <h1>{movie.title}</h1>
+          )
+        })}
+      </section>
     )
   }
 }
