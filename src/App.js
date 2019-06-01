@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <>
-        {/* <RandomMovie /> */}
+        <RandomMovie />
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />

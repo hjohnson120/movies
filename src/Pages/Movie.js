@@ -24,7 +24,7 @@ class Movie extends Component {
   render() {
     return (
       <div>
-        <h1>sdjasd</h1>
+        <h1>I work, kinda</h1>
         <Link to="/">Go Home</Link>
       </div>
     )
