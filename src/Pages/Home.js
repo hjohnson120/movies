@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Home extends Component {
   state = {
-    movies: []
+    movieList: []
   }
 
   componentDidMount() {
@@ -20,7 +20,9 @@ class Home extends Component {
       })
   }
   render() {
-    return <></>
+    return (
+      <section>{this.state.movieList.original_title.map(movie, index)}</section>
+    )
   }
 }
 
