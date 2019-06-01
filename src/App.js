@@ -10,9 +10,9 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Home} />
-            <RandomMovie />
           </Switch>
         </Router>
+        <RandomMovie />
       </>
     )
   }
