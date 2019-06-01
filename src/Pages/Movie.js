@@ -1,28 +1,24 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-// const movieId = this.props.match.params.id
-
 class Movie extends Component {
-  getMovieId() {
+  componentDidMount() {
     fetch(
       `https://api.themoviedb.org/3/movie/${
         this.props.movieId
       }/credits?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad`
+
+      // https://api.themoviedb.org/3/movie/420817/credits?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad`
     )
       .then(resp => {
         return resp.json()
       })
-      .then(movieList => {
-        console.log(movieList)
+      .then(movieSelected => {
+        console.log(movieSelected)
         this.setState({
-          movies: movieList.results
+          movie: movieSelected.data
         })
       })
-  }
-
-  componentDidMount() {
-    this.getMovieId()
   }
 
   render() {
