@@ -14,7 +14,9 @@ class Home extends Component {
       })
       .then(movieList => {
         console.log(movieList)
-        movie: resp.data.results
+        this.setState({
+          movies: movieList.results
+        })
       })
   }
   render() {
