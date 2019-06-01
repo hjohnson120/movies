@@ -21,7 +21,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <section>
+      <section className="movies-container">
         {this.state.movies.map((movie, index) => {
           return (
             <>
