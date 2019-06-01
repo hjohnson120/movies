@@ -27,7 +27,6 @@ class Home extends Component {
   render() {
     return (
       <>
-        {/* <Link to="/Movie"> Movie </Link> */}
         <section className="movies-container">
           {this.state.movies.map((movie, index) => {
             return (
@@ -35,7 +34,7 @@ class Home extends Component {
                 <img
                   src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                 />
-                <h1 className="title">{movie.title}</h1>
+                <Link to="/Movie">{movie.title}</Link>
               </div>
             )
           })}
