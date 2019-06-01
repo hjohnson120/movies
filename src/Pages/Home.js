@@ -13,7 +13,7 @@ class Home extends Component {
         return resp.json()
       })
       .then(movieList => {
-        // console.log(movieList)
+        console.log(movieList)
         this.setState({
           movies: movieList.results
         })

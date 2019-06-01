@@ -7,12 +7,11 @@ class App extends Component {
     return (
       <>
         <Router>
-          <Route>
-            <Switch />
-          </Route>
+          <Switch>
+            <Route exact path="/" component={Home} />
+          </Switch>
         </Router>
         <Home />
-        
       </>
     )
   }
