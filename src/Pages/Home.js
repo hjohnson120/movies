@@ -22,18 +22,21 @@ class Home extends Component {
   }
   render() {
     return (
-      <section className="movies-container">
-        {this.state.movies.map((movie, index) => {
-          return (
-            <div className="movie">
-              <img
-                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-              />
-              <h1 className="title">{movie.title}</h1>
-            </div>
-          )
-        })}
-      </section>
+      <>
+        {/* <Link to="/Movie"> Movie </Link> */}
+        <section className="movies-container">
+          {this.state.movies.map((movie, index) => {
+            return (
+              <div className="movie">
+                <img
+                  src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
+                />
+                <h1 className="title">{movie.title}</h1>
+              </div>
+            )
+          })}
+        </section>
+      </>
     )
   }
 }
