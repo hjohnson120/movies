@@ -13,7 +13,7 @@ class Home extends Component {
         return resp.json()
       })
       .then(movieList => {
-        // console.log(movieList)
+        console.log(movieList)
         this.setState({
           movies: movieList.results
         })
@@ -21,7 +21,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <section>
+      <section className="movies-container">
         {this.state.movies.map((movie, index) => {
           return (
             <>
@@ -35,6 +35,5 @@ class Home extends Component {
       </section>
     )
   }
-}
 
 export default Home
