@@ -12,4 +12,15 @@ body {
 }
 
 .movies-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.movie {
+  text-align: center;
+}
+
+.title {
+  max-width: 300px;
 }
