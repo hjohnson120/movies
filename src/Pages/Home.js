@@ -14,7 +14,7 @@ class Home extends Component {
       })
       .then(movieList => {
         console.log(movieList)
-        movies: resp.data.results
+        movie: resp.data.results
       })
   }
   render() {
