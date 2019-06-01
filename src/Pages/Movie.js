@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-const movieId = this.props.match.params.id
+// const movieId = this.props.match.params.id
 
 class Movie extends Component {
   getMovieId() {
     fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad`
+      `https://api.themoviedb.org/3/movie/${
+        this.props.movieId
+      }/credits?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad`
     )
       .then(resp => {
         return resp.json()
@@ -24,10 +27,10 @@ class Movie extends Component {
 
   render() {
     return (
-      <>
-        <h1>{this.movieId}</h1>
-        <h1>Hi!</h1>
-      </>
+      <div>
+        <h1>sdjasd</h1>
+        <Link to="/">Go Home</Link>
+      </div>
     )
   }
 }
