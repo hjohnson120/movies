@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 class Home extends Component {
+  state = {
+    movies: []
+  }
+
   componentDidMount() {
     fetch(
       'https://api.themoviedb.org/3/movie/now_playing?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad&language=en-US&page=1'
