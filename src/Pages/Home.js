@@ -35,7 +35,7 @@ class Home extends Component {
                   src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                   alt="move poster"
                 />
-                <Link to="/Movie" className="title">
+                <Link to="/Movie/:id" className="title">
                   {movie.title}
                 </Link>
               </div>
