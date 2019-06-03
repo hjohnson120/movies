@@ -47,6 +47,7 @@ class Home extends Component {
              } )]}  */}
           </section>
         </section>
+        <h1 className="playing">Now Playing</h1>
         <section className="movies-container">
           {this.state.movies.map((movie, index) => {
             return (

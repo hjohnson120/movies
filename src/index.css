@@ -49,3 +49,6 @@ body {
   display: flex;
   flex-direction: column;
 }
+.playing {
+  text-align: center;
+}
