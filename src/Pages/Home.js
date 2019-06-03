@@ -30,18 +30,19 @@ class Home extends Component {
     return (
       <>
         <section className="random-movie">
-          {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
-          {/* {this.state.movies[Math.ceil(Math.random() * 20)]
-            return  (
+          {/* {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
+          {this.state.movies[Math.ceil(Math.random() * 20 => {
+            return (
               <div>
-                <h1>
-                  {movie.title}
-                </h1>
+                <img
+                  src={`https://image.tmdb.org/t/p/w300${movies[Math.ceil(Math.random() * 20)]}`}
+                  alt="movie poster"
+                />
               </div>
             
           )
           
-           }  */}
+             } )]}  */}
         </section>
         <section className="movies-container">
           {this.state.movies.map((movie, index) => {
