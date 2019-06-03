@@ -31,8 +31,17 @@ class Home extends Component {
       <>
         <section className="random-movie">
           {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
-          {/* {console.log(this.randomNumber)} */}
-          {/* {console.log(this.props.movies)} */}
+          {/* {this.state.movies[Math.ceil(Math.random() * 20)]
+            return  (
+              <div>
+                <h1>
+                  {movie.title}
+                </h1>
+              </div>
+            
+          )
+          
+           }  */}
         </section>
         <section className="movies-container">
           {this.state.movies.map((movie, index) => {
