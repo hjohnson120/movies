@@ -12,7 +12,7 @@ class App extends Component {
           {/* <RandomMovie /> */}
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/Movie" exact component={Movie} />
+            <Route path="/Movie/:id" exact component={Movie} />
           </Switch>
         </Router>
       </>
