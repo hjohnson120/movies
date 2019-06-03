@@ -29,8 +29,10 @@ class Home extends Component {
   render() {
     return (
       <>
-        <section className="random-movie">
-          {/* {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
+        <section className="random-container">
+          <h1>Featured Movie</h1>
+          <section className="random-movie">
+            {/* {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
           {this.state.movies[Math.ceil(Math.random() * 20 => {
             return (
               <div>
@@ -43,12 +45,14 @@ class Home extends Component {
           )
           
              } )]}  */}
+          </section>
         </section>
         <section className="movies-container">
           {this.state.movies.map((movie, index) => {
             return (
               <div className="movie" key={index}>
                 <img
+                  className="poster"
                   src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                   alt="movie poster"
                 />

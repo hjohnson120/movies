@@ -33,6 +33,19 @@ body {
 .random-movie {
   width: 300px;
   height: 450px;
-  border: 10px solid red;
+  border: 5px solid black;
+}
+
+.poster {
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.random-container {
   align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
