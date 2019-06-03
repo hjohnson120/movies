@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+// import RandomMovie from '../components/RandomMovie'
 
 class Home extends Component {
   state = {
-    movies: []
+    movies: [],
+    randomNumber: []
   }
 
   getMovieApi = () => {
@@ -27,13 +29,18 @@ class Home extends Component {
   render() {
     return (
       <>
+        <section className="random-movie">
+          {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
+          {/* {console.log(this.randomNumber)} */}
+          {/* {console.log(this.props.movies)} */}
+        </section>
         <section className="movies-container">
           {this.state.movies.map((movie, index) => {
             return (
               <div className="movie" key={index}>
                 <img
                   src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                  alt="move poster"
+                  alt="movie poster"
                 />
                 <Link to="/Movie" className="title">
                   {movie.title}

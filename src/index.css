@@ -15,6 +15,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  margin-top: 25px;
 }
 
 .movie {
@@ -24,5 +25,14 @@ body {
 .title {
   max-width: 300px;
   display: flex;
+  justify-content: center;
   margin: 4%;
+  text-decoration: none;
+}
+
+.random-movie {
+  width: 300px;
+  height: 450px;
+  border: 10px solid red;
+  align-items: center;
 }

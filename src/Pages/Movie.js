@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 class Movie extends Component {
   componentDidMount() {
     fetch(
-      `https://api.themoviedb.org/3/movie/${
-        this.props.movieId
-      }/credits?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad`
+      // `https://api.themoviedb.org/3/movie/${
+      //   this.props.movieId
+      // }/credits?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad`
 
-      // https://api.themoviedb.org/3/movie/420817/credits?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad`
+      'https://api.themoviedb.org/3/movie/420817/credits?api_key=cfc38bddee72b29ba6fdad5b0b3b72ad'
     )
       .then(resp => {
         return resp.json()

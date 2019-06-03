@@ -6,7 +6,7 @@ class RandomMovie extends Component {
     console.log(randomNumber)
     return (
       <section className="random-movie">
-        {this.props.movie.title}
+        {/* {this.props.movie.title} */}
         {/* {console.log(this.props.movies)} */}
       </section>
     )
