@@ -32,8 +32,8 @@ class Home extends Component {
         <section className="random-container">
           <h1>Featured Movie</h1>
           <section className="random-movie">
-            {/* {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
-          {this.state.movies[Math.ceil(Math.random() * 20 => {
+            {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
+            {/* {this.state.movies[Math.ceil(Math.random() * 20 => {
             return (
               <div>
                 <img
