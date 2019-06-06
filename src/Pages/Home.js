@@ -5,7 +5,8 @@ import { Link } from 'react-router-dom'
 class Home extends Component {
   state = {
     movies: [],
-    randomNumber: []
+    randomNumber: [],
+    featuredMovie: {}
   }
 
   getMovieApi = () => {
@@ -18,7 +19,8 @@ class Home extends Component {
       .then(movieList => {
         console.log(movieList)
         this.setState({
-          movies: movieList.results
+          movies: movieList.results,
+          featuredMovie: movieList.results[Math.ceil(Math.random() * 20)]
         })
       })
   }
@@ -33,18 +35,15 @@ class Home extends Component {
           <h1>Featured Movie</h1>
           <section className="random-movie">
             {console.log(this.state.movies[Math.ceil(Math.random() * 20)])}
-            {/* {this.state.movies[Math.ceil(Math.random() * 20 => {
-            return (
-              <div>
-                <img
-                  src={`https://image.tmdb.org/t/p/w300${movies[Math.ceil(Math.random() * 20)]}`}
-                  alt="movie poster"
-                />
-              </div>
-            
-          )
-          
-             } )]}  */}
+
+            <div>
+              <img
+                src={`https://image.tmdb.org/t/p/w300${
+                  this.state.featuredMovie.poster_path
+                }`}
+                alt="movie poster"
+              />
+            </div>
           </section>
         </section>
         <h1 className="playing">Now Playing</h1>
@@ -57,7 +56,7 @@ class Home extends Component {
                   src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
                   alt="movie poster"
                 />
-                <Link to="/Movie/:id" className="title">
+                <Link to={`/movie/${movie.id}`} className="title">
                   {movie.title}
                 </Link>
               </div>
