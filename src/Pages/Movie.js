@@ -28,6 +28,7 @@ class Movie extends Component {
   render() {
     return (
       <div>
+        <section className="movie-info" />
         <h1>I work, kinda</h1>
         <Link to="/">Go Home</Link>
       </div>
