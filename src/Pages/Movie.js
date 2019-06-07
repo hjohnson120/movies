@@ -2,10 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 class Movie extends Component {
-  state = {
-    movie: []
-  }
-
   getSelectedMovie = () => {
     fetch(
       `https://api.themoviedb.org/3/movie/${
