@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 class Movie extends Component {
   state = {
     movie: []
+    // character: []
   }
 
   getSelectedMovie = () => {
@@ -18,7 +19,7 @@ class Movie extends Component {
       .then(movieSelected => {
         console.log(movieSelected)
         this.setState({
-          movie: movieSelected.results
+          movie: movieSelected.cast
         })
       })
   }
@@ -31,7 +32,11 @@ class Movie extends Component {
     return (
       <div>
         <section className="movie-info" />
-        {/* <h1> {this.state.movie.character}</h1> */}
+        {/* <h1>{this.state.movie.cast.name}</h1> */}
+        {/* <img
+          src={`https://image.tmdb.org/t/p/w300${this.state.movie.poster_path}`}
+          alt="movie poster"
+        /> */}
         <Link to="/">Go Home</Link>
       </div>
     )
