@@ -46,19 +46,31 @@ class Movie extends Component {
   render() {
     return (
       <>
+        <header>
+          <Link to="/">Go Home</Link>
+        </header>
         <div>
           <h1 className="movie">{this.state.movie.title}</h1>
           <h2 className="movie">Cast Members</h2>
           {this.state.cast.map(cast => {
             return (
               <li className="cast-container">
-                <p>{cast.character}</p>
-                <p>{cast.name}</p>
+                <p>
+                  <b>Character: </b>
+                  {cast.character}
+                </p>
+                <p>
+                  <b>Actor: </b> {cast.name}
+                </p>
+                <img
+                  className="poster"
+                  src={`https://image.tmdb.org/t/p/w300${cast.profile_path}`}
+                  alt="actor poster"
+                />
                 <hr />
               </li>
             )
           })}
-          <Link to="/">Go Home</Link>
         </div>
       </>
     )
